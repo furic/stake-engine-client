@@ -79,6 +79,16 @@ function formatJson(obj: unknown): string {
 	return JSON.stringify(obj, null, 2);
 }
 
+/** Escape a value for safe interpolation into innerHTML. */
+function escapeHtml(value: unknown): string {
+	return String(value ?? '')
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+		.replace(/'/g, '&#39;');
+}
+
 function formatBalance(amount: number, currency: string): string {
 	const dollars = amount / API_AMOUNT_MULTIPLIER;
 	return `$${dollars.toFixed(2)} ${currency}`;
@@ -215,8 +225,8 @@ async function handleReplayMode() {
 	const params = getReplayUrlParams();
 
 	replayInfo.innerHTML = `
-		<p><strong>Game:</strong> ${params.game} v${params.version}</p>
-		<p><strong>Mode:</strong> ${params.mode} | <strong>Event:</strong> ${params.event}</p>
+		<p><strong>Game:</strong> ${escapeHtml(params.game)} v${escapeHtml(params.version)}</p>
+		<p><strong>Mode:</strong> ${escapeHtml(params.mode)} | <strong>Event:</strong> ${escapeHtml(params.event)}</p>
 		${params.amount ? `<p><strong>Original Bet:</strong> $${params.amount.toFixed(2)}</p>` : ''}
 	`;
 
@@ -261,8 +271,8 @@ async function handleManualReplay() {
 	}
 
 	replayInfo.innerHTML = `
-		<p><strong>Game:</strong> ${game} v${version}</p>
-		<p><strong>Mode:</strong> ${mode} | <strong>Event:</strong> ${event}</p>
+		<p><strong>Game:</strong> ${escapeHtml(game)} v${escapeHtml(version)}</p>
+		<p><strong>Mode:</strong> ${escapeHtml(mode)} | <strong>Event:</strong> ${escapeHtml(event)}</p>
 	`;
 
 	hide(loginSection);
