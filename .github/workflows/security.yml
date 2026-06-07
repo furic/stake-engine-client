@@ -35,14 +35,17 @@ jobs:
     - name: Run npm audit
       run: |
         echo "Running npm audit..."
-        npm audit --audit-level moderate || true
-        
-        # Generate audit report
+        # This package publishes only compiled dist/ with zero runtime dependencies,
+        # so the gate scans production deps only (--omit=dev). Dev-only tooling vulns
+        # (e.g. the vite demo build) never reach consumers and shouldn't fail CI.
+        npm audit --omit=dev --audit-level moderate || true
+
+        # Generate audit report (full, including dev deps, for visibility)
         npm audit --json > audit-report.json || true
-        
-        # Check for high/critical vulnerabilities
-        HIGH_VULNS=$(npm audit --audit-level high --json | jq -r '.metadata.vulnerabilities.high // 0')
-        CRITICAL_VULNS=$(npm audit --audit-level critical --json | jq -r '.metadata.vulnerabilities.critical // 0')
+
+        # Check for high/critical vulnerabilities in production dependencies
+        HIGH_VULNS=$(npm audit --omit=dev --audit-level high --json | jq -r '.metadata.vulnerabilities.high // 0')
+        CRITICAL_VULNS=$(npm audit --omit=dev --audit-level critical --json | jq -r '.metadata.vulnerabilities.critical // 0')
         
         echo "High vulnerabilities: $HIGH_VULNS"
         echo "Critical vulnerabilities: $CRITICAL_VULNS"
