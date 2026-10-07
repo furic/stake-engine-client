@@ -385,7 +385,7 @@ If your issue isn't covered here:
 1. Check [Status Codes](Status-Codes) for error code meanings
 2. Review [Package Integration](Package-Integration) for setup
 3. See [Usage Patterns](Usage-Patterns) for examples
-4. Create an issue on [GitHub](https://github.com/raw-fun-gaming/stake-engine-client/issues)
+4. Create an issue on [GitHub](https://github.com/furic/stake-engine-client/issues)
 
 ## Related Pages
 

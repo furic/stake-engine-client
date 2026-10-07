@@ -77,15 +77,15 @@ console.log('Payout:', result.round?.payoutMultiplier);
 
 ## 🔗 Links
 
-- **[GitHub Repository](https://github.com/raw-fun-gaming/stake-engine-client)**
+- **[GitHub Repository](https://github.com/furic/stake-engine-client)**
 - **[npm Package](https://www.npmjs.com/package/stake-engine-client)**
-- **[Releases](https://github.com/raw-fun-gaming/stake-engine-client/releases)**
-- **[Issues](https://github.com/raw-fun-gaming/stake-engine-client/issues)**
+- **[Releases](https://github.com/furic/stake-engine-client/releases)**
+- **[Issues](https://github.com/furic/stake-engine-client/issues)**
 
 ## 📄 License
 
-MIT License - see the [LICENSE](https://github.com/raw-fun-gaming/stake-engine-client/blob/main/LICENSE) file for details.
+MIT License - see the [LICENSE](https://github.com/furic/stake-engine-client/blob/main/LICENSE) file for details.
 
 ---
 
-**Need help?** Check the [Common Issues](Common-Issues) page or [create an issue](https://github.com/raw-fun-gaming/stake-engine-client/issues/new) on GitHub.
+**Need help?** Check the [Common Issues](Common-Issues) page or [create an issue](https://github.com/furic/stake-engine-client/issues/new) on GitHub.

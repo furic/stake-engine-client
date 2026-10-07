@@ -9,7 +9,7 @@ All API requests and responses are fully typed, giving you:
 - **Type Safety** - Catch errors at compile time
 - **Documentation** - Inline type hints
 
-The types are defined in [src/types.ts](https://github.com/raw-fun-gaming/stake-engine-client/blob/main/src/types.ts) and exported from the main package.
+The types are defined in [src/types.ts](https://github.com/furic/stake-engine-client/blob/main/src/types.ts) and exported from the main package.
 
 ## Importing Types
 
@@ -254,7 +254,7 @@ if (response.balance && response.balance.amount !== undefined) {
 
 ## Full Type Reference
 
-All types are defined in [src/types.ts](https://github.com/raw-fun-gaming/stake-engine-client/blob/main/src/types.ts). The file is ~474 lines and includes:
+All types are defined in [src/types.ts](https://github.com/furic/stake-engine-client/blob/main/src/types.ts). The file is ~474 lines and includes:
 
 - **8 API endpoints** with full request/response types
 - **50+ schema definitions** for all data structures

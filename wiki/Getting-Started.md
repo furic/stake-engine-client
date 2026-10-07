@@ -20,7 +20,7 @@ This guide walks you through setting up a Stake Engine game from scratch and tes
 Math books define the game outcomes and probabilities. You can use the included demo math files or create your own.
 
 1. In your game page, click **Files** > **Import Files** > **Math**
-2. Upload the files from [`demo/math/`](https://github.com/raw-fun-gaming/stake-engine-client/tree/main/demo/math) folder:
+2. Upload the files from [`demo/math/`](https://github.com/furic/stake-engine-client/tree/main/demo/math) folder:
    - `base.csv` - Human-readable format
    - `base.json` - JSON format
    - `base.jsonl` - JSON Lines format
@@ -47,7 +47,7 @@ Upload a minimal `index.html` file as a placeholder:
 Build the interactive demo and upload it as your frontend:
 
 ```bash
-git clone https://github.com/raw-fun-gaming/stake-engine-client.git
+git clone https://github.com/furic/stake-engine-client.git
 cd stake-engine-client
 npm install
 npm run build:demo
@@ -68,7 +68,7 @@ Then upload the contents of the `docs/` folder via **Files** > **Import Files** 
 If you uploaded a placeholder frontend, use the hosted demo page:
 
 1. Copy your game URL (including all parameters)
-2. Go to [raw-fun-gaming.github.io/stake-engine-client](https://raw-fun-gaming.github.io/stake-engine-client/)
+2. Go to [furic.github.io/stake-engine-client](https://furic.github.io/stake-engine-client/)
 3. Paste the URL and click **Parse URL**
 4. Click **Authenticate** to connect
 

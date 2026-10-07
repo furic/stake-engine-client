@@ -11,7 +11,7 @@
  * Stake Engine's RGS API, including authentication, betting, balance
  * management, and game event tracking.
  *
- * @author Raw Fun Gaming
+ * @author Richard Fu
  * @license MIT
  */
 
